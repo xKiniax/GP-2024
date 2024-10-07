@@ -3,8 +3,8 @@ extends CharacterBody2D
 @export var bullet_scene:PackedScene
 @export var bullet_spawn_point:Node2D
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 350.0
+const JUMP_VELOCITY = -100.0
 
 const TURN_RATE = 180
 

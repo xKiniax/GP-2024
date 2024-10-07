@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://owbrrwlxhmsk"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_x5qrg"]
+[ext_resource type="Texture2D" uid="uid://bu43uu4c7n4aq" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_008.png" id="2_4g3bo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mdokn"]
+radius = 35.171
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(69, 309)
+script = ExtResource("1_x5qrg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -1)
+scale = Vector2(1.66216, 1.68182)
+texture = ExtResource("2_4g3bo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_mdokn")

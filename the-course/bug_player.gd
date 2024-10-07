@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 180
 
 @export var explosion_scene:PackedScene
 
@@ -11,7 +11,7 @@ extends CharacterBody2D
 var can_move = true
 
 func _ready():
-	laser.visible = false
+	laser.visible = true
 
 func _process(delta):
 	if Input.is_action_pressed("fire"):
@@ -39,7 +39,7 @@ func _physics_process(delta):
 	can_move = true
 	if can_move:
 		var r = get_viewport_rect()	
-		var f = Input.get_axis("left", "right")
+		var f = Input.get_axis("turn_left", "turn_right")
 		velocity.x = f * speed
 		move_and_slide()
 
