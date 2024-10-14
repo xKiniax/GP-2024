@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 	
 func _process(delta):
-	velocity = transform.y * speed
+	velocity = -transform.y * speed
 	var c =  move_and_collide(velocity * delta)
 	if c:
 		if c.get_collider().name.contains("block"):

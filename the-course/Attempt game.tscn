@@ -9,10 +9,11 @@ radius = 35.171
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn_point")]
 position = Vector2(69, 309)
 script = ExtResource("1_x5qrg")
 bullet_scene = ExtResource("2_kxt3m")
+bullet_spawn_point = NodePath(".")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -1)
