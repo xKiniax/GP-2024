@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://co6xhccydaqm7"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_7k5ga"]
+[ext_resource type="Texture2D" uid="uid://oksfkp3tyirx" path="res://assets/PNG/Sprites/Astronauts/ghost mob.png" id="2_q3u41"]
+[ext_resource type="Texture2D" uid="uid://j41lwsds70r2" path="res://assets/ghost mob up.png" id="3_tq6nh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gpa1q"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q3u41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tq6nh")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txd0h"]
+size = Vector2(22.2414, 17.9692)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(10, 10)
+
+[node name="Mob" type="RigidBody2D" parent="."]
+position = Vector2(10.1, 9.9)
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_7k5ga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mob"]
+sprite_frames = SubResource("SpriteFrames_gpa1q")
+animation = &"standing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob"]
+position = Vector2(0.124181, 1.13211)
+scale = Vector2(0.550702, 0.816074)
+shape = SubResource("RectangleShape2D_txd0h")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Mob"]
