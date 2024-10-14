@@ -18,8 +18,8 @@ func _physics_process(delta: float) -> void:
 	
 	var f = Input.get_axis("move_backwards", "move_forwards")
 
-	var vel = transform.x * f * SPEED
-	print(transform.x)
+	var vel = transform.y * f * SPEED
+	print(transform.y)
 	velocity = vel
 	
 	if Input.is_action_pressed("fire"):

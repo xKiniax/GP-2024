@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://owbrrwlxhmsk"]
+[gd_scene load_steps=5 format=3 uid="uid://owbrrwlxhmsk"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_x5qrg"]
 [ext_resource type="Texture2D" uid="uid://bu43uu4c7n4aq" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_008.png" id="2_4g3bo"]
+[ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_kxt3m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdokn"]
 radius = 35.171
@@ -11,6 +12,7 @@ radius = 35.171
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(69, 309)
 script = ExtResource("1_x5qrg")
+bullet_scene = ExtResource("2_kxt3m")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -1)
