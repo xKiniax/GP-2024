@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var velocity = 200
-var Vector2 = int
+@export var Vector2 = 200
 
 
 
