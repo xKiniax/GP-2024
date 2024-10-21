@@ -1,6 +1,8 @@
 extends RigidBody2D
 
 var velocity = 200
+var Vector2 = int
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +14,7 @@ func _ready() -> void:
 func _process(_delta:) :
 	pass
 	
-	if transform.x = 0:
+	if transform.x != 0:
 		$AnimatedSprite2D.animation = "standing"
 		$AnimatedSprite2D.flip_v = false
 		# See the note below about the following boolean assignment.
