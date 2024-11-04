@@ -4,7 +4,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="playerr" type="Sprite2D" parent="."]
+[node name="player" type="Sprite2D" parent="."]
 
 [node name="bug" type="Sprite2D" parent="."]
 script = ExtResource("1_tf1dk")
