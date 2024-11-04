@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwldvcl4cyfh3"]
+[gd_scene load_steps=3 format=3 uid="uid://cwldvcl4cyfh3"]
 
-[ext_resource type="Script" path="res://trump.gd" id="1_tf1dk"]
+[ext_resource type="Texture2D" uid="uid://csfstyjj1bcb6" path="res://sprites/bomb.png" id="1_pputg"]
+[ext_resource type="Script" path="res://circle.gd" id="2_kn2he"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="player" type="Sprite2D" parent="."]
+texture = ExtResource("1_pputg")
 
-[node name="bug" type="Sprite2D" parent="."]
-script = ExtResource("1_tf1dk")
+[node name="Circle" type="Node" parent="."]
+script = ExtResource("2_kn2he")
+count = null
+radius = null
