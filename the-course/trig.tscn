@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwldvcl4cyfh3"]
+
+[ext_resource type="Script" path="res://trump.gd" id="1_tf1dk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="playerr" type="Sprite2D" parent="."]
+
+[node name="bug" type="Sprite2D" parent="."]
+script = ExtResource("1_tf1dk")
